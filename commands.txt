@@ -1,0 +1,17 @@
+git status 
+
+git add filename 
+
+git commit -m "message"
+
+git status 
+
+
+
+
+
+
+
+https://menschapparels-jpg.github.io/Investor-Plan/
+
+
