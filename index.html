@@ -2381,30 +2381,7 @@ ${gstrip(['shirts','trousers','jackets','overshirts','jeans','linen','polos','ts
    <div class="row-between"><span class="med" style="font-size:13.5px">${t}</span>
     <span class="src src-${tier}">${TIERS[tier].l}</span></div>
    <p class="t-label muted" style="margin-top:.4375rem;line-height:1.2rem">${d}</p></div></div>`).join('')}
-</div>
-
-${blkHead('Geography')}
-<div class="panel"><div class="p-body flush"><table class="t">
- <thead><tr><th>Market</th><th>Role for MENSCH</th><th>Entry</th><th data-n>Sizing</th></tr></thead>
- <tbody>
-  <tr><td class="med">Tier 1 — Bengaluru, Mumbai, Delhi NCR</td>
-   <td class="muted t-label">Launch market. D2C plus the first store.</td>
-   <td><span class="badge badge-acc">Month 1</span></td>
-   <td data-n class="faint fig" title="Not independently verified">—</td></tr>
-  <tr><td class="med">Tier 2 — Pune, Hyderabad, Ahmedabad, Chandigarh</td>
-   <td class="muted t-label">Marketplace-led. No store investment required.</td>
-   <td><span class="badge">Month 7</span></td>
-   <td data-n class="faint fig" title="Not independently verified">—</td></tr>
-  <tr><td class="med">Tier 3</td>
-   <td class="muted t-label">Reached through marketplace logistics only.</td>
-   <td><span class="badge">Year 2</span></td>
-   <td data-n class="faint fig" title="Not independently verified">—</td></tr>
-  <tr><td class="med">GCC — UAE, Saudi Arabia, Qatar</td>
-   <td class="muted t-label">Asset-light. Shopify international plus Dubai creator seeding.</td>
-   <td><span class="badge">Year 3</span></td>
-   <td data-n>${factBlock(MKT.gcc,null,{compact:true})}</td></tr>
- </tbody></table></div></div>
-<p class="t-micro faint" style="margin-top:.75rem">Market sizing by tier and the GCC diaspora figure both came from the original deck with no citation attached. They are shown as em-dashes until a credible 2026 source is on file. The entry sequence is our plan and does not depend on them.</p>`;
+</div>`;
 
 /* ── 01.2 CONSUMER SEGMENTS ───────────────────────────────────────────── */
 const PERSONAS=[
@@ -3712,7 +3689,7 @@ ${blkHead('Why not marketplace-first')}
 
 PAGES['plan/launch']=()=>{const at=get('phase',0);
  const P=[[0,'Validation','Month −3 to 0',['Market research','Brand identity','Vendor shortlist and contracts','Sampling, two rounds','Pricing validation','Website build','30 Reels and 60 images shot'],'Tranche 1 releases on setup completion'],
-  [1,'Controlled launch','Month 1–6',['Two categories — 15 shirts, 10 linen shirts','25 styles, 1,625 units','D2C website live','Instagram Shop','₹12 L a month marketing','10 creator gifting packs','100% D2C, no marketplace'],'Three consecutive months above ₹8 L D2C revenue'],
+  [1,'Controlled launch','Month 1–6',['Two categories — 15 shirts, 10 linen shirts','25 styles, 1,575 units','D2C website live','Instagram Shop','₹12 L a month marketing','10 creator gifting packs','100% D2C, no marketplace'],'Three consecutive months above ₹8 L D2C revenue'],
   [2,'Scale','Month 7–13',['Eight further categories','Myntra and Ajio listing','Amazon from Month 9','Marketing sustained','Senior marketing hire'],'H1 net revenue ≥ ₹2.0 Cr and GM ≥ 55% → Tranche 2'],
   [3,'Omnichannel','Month 14–24',['Bengaluru flagship','2,500–3,500 sq ft','Retail ops manager and five staff','Loyalty programme live','Offline-online integration'],'Store EBITDA-positive two consecutive months → Tranche 3'],
   [4,'International','Year 3',['GCC validation','Shopify international storefront','Dubai creator network','Cross-border fulfilment','2–3 further Tier-1 stores'],'Year 2 GMV ≥ ₹15 Cr']];
@@ -3736,7 +3713,7 @@ ${blkHead('All five in sequence')}
  <tbody>${P.map(p=>`<tr class="${at===p[0]?'hi':''}"><td class="semi">${p[0]} — ${esc(p[1])}</td>
   <td class="fig t-label">${esc(p[2])}</td><td class="t-label muted">${esc(p[3].slice(0,3).join(' · '))}</td>
   <td class="t-label">${esc(p[4])}</td></tr>`).join('')}</tbody></table></div></div>
-<div class="note" style="margin-top:.875rem"><b>How the range splits across the phases.</b> Twelve categories in total. Phase 1 opens with two of them — shirts and linen shirts, 25 styles and 1,625 units at roughly 65 units a style. Phase 2 releases the eight further categories. The last two, underwear and socks, are deferred to Year 2. The full 5,602-unit launch buy lands in the warehouse on 10 September; Phase 1 sells the shirt and linen block from it while the rest is held against the Phase 2 gate.</div>`};
+<div class="note" style="margin-top:.875rem"><b>How the range splits across the phases.</b> Twelve categories in total. Phase 1 opens with two of them — shirts and linen shirts, 25 styles and 1,575 units — 975 shirts and 600 linen. Phase 2 releases the eight further categories. The last two, underwear and socks, are deferred to Year 2. The full 5,602-unit launch buy lands in the warehouse on 10 September; Phase 1 sells the shirt and linen block from it while the rest is held against the Phase 2 gate.</div>`};
 
 const CALC0={fab:340,cmt:200,trim:28,pack:21,wsh:22,frt:22,qc:17,mrp:1899,disc:0,mp:0,mkt:720,ret:12};
 PAGES['plan/pricing']=()=>{const c={...CALC0,...(get('calc')||{})};
@@ -5685,7 +5662,7 @@ function PRES(){const f=FIN(),a=A();return [
   f:[['22–38','Target age'],['₹6–40 L','Income band'],['Confidence','The territory']],go:'brand/positioning'},
  {e:'The product',h:'Twelve categories. 88 styles. 5,602 units.',
   s:'The shirt leads — India\'s highest-frequency fashion repurchase and the clearest quality signal at ₹1,899. A man who trusts the shirt buys the jacket without asking.',
-  f:[['25','Styles in Phase 1'],['1,625','Units'],['₹65,000','Max exposure per style']],go:'brand/collection'},
+  f:[['25','Styles in Phase 1'],['1,575','Units'],['₹65,000','Max exposure per style']],go:'brand/collection'},
  {e:'Unit economics',h:'₹650 in. ₹1,159 out.',
   s:'Direct to factory in Tirupur and Bengaluru with no wholesaler. Every component costed — including the 2% defect allowance and the inward freight most plans forget.',
   f:[['₹1,899','Selling price'],['₹650','Landed cost'],['65.8%','Gross margin'],['₹1,004','D2C contribution']],go:'money/production'},
@@ -6380,7 +6357,7 @@ ${blkHead('The app')}
 ${blkHead('What every element is doing')}
 <div class="panel"><div class="p-body flush"><table class="t">
  <thead><tr><th>Element</th><th>The decision behind it</th><th>From</th></tr></thead>
- <tbody>${[['Shirt on the homepage','Phase 1 is shirts and linen — 25 styles, 1,625 units','The Collection'],
+ <tbody>${[['Shirt on the homepage','Phase 1 is shirts and linen — 25 styles, 1,575 units','The Collection'],
   ['₹1,899 inclusive of taxes','Mid-point of the band. 5% GST under the ₹2,500 threshold','Pricing'],
   ['Free delivery, every order','₹88 a shipment absorbed into the ₹1,004 contribution','Unit Economics'],
   ['7-day exchange, prepaid pickup','12% return rate modelled and paid for','Customer Service'],
